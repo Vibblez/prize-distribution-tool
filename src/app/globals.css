@@ -1,0 +1,314 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: ;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 215 20.2% 65.1%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+ 
+    /* background-color: rgba(255, 255, 255, .05); */
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: ;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 217.2 32.6% 17.5%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.wallet-adapter-button-trigger {
+  background-color: #512da8 !important;
+}
+
+.wallet-adapter-button:not([disabled]):focus-visible {
+  outline-color: white  !important;
+}
+
+.wallet-adapter-button:not([disabled]):hover {
+  background-color: #1a1f2e  !important;
+}
+
+.wallet-adapter-button[disabled] {
+  background: #404144  !important;
+  color: #999  !important;
+  cursor: not-allowed  !important;
+}
+
+.wallet-adapter-button-end-icon,
+.wallet-adapter-button-start-icon,
+.wallet-adapter-button-end-icon img,
+.wallet-adapter-button-start-icon img {
+  display: flex  !important;
+  align-items: center  !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+div.AboutPage p {
+  @apply mb-4;
+}
+
+div.AboutPage strong {
+  @apply font-bold;
+}
+
+/* https://codepen.io/sosuke/pen/Pjoqqp */
+
+.dark .invert-color {
+  filter: invert(1) invert(61%) sepia(6%) saturate(3547%) hue-rotate(213deg) brightness(105%) contrast(106%);
+}
+
+.invert-color {
+  filter: invert(1) invert(28%) sepia(13%) saturate(4525%) hue-rotate(225deg) brightness(94%) contrast(89%);
+}
+
+.green-color {
+  filter: invert(1) invert(52%) sepia(22%) saturate(1410%) hue-rotate(89deg) brightness(91%) contrast(101%);
+}
+
+.crossed-out-background {
+  background-image: repeating-linear-gradient(45deg, red 0, red 10px, white 10px, white 20px);
+  /* background-size: 20px 100%; */
+  /* padding-block: .25em; */
+}
+
+.stroke {
+  text-shadow: 2px 0px 0px black, 0px -2px 0px black, -2px 0px 0px black, 0px 2px 0px black, 2px 2px 0px black, -2px -2px 0px black;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.plaque {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 75% 55%, 71% 55%, 70% 53%, 70% 14%, 70% 11%, 68% 10%, 0% 10%);
+}
+
+.plaque.bronze {
+  background: linear-gradient(-68deg, 
+    #EFA96C 4%, 
+    #924C1C 7%, 
+    #AD6C37 8%, 
+    #D79D5F 9%, 
+    #E5AE6D 10%, 
+    #EFBA77 11%, 
+    #F5C17D 13%, 
+    #F7C37F 17%, 
+    #FFDE93 21%, 
+    #FACD86 32%, 
+    #E8925B 50%, 
+    #CB9B5C 67%, 
+    #FCD38A 74%, 
+    #E5BB77 83%, 
+    #722C01 100%
+  );
+}
+
+.plaque.silver { 
+  background: linear-gradient(-68deg, 
+    #E6E6E6 0%, 
+    #E0E5E9 24%, 
+    #C5CAD0 37%, 
+    #E6E6E6 49%, 
+    #DFE0E1 51%, 
+    #CACED3 59%, 
+    #C3C8CE 64%, 
+    #D5D8DC 67%, 
+    #E5E7E8 70%, 
+    #EFEFEF 74%, 
+    #F2F2F2 80%, 
+    #D8D9DC 83%, 
+    #B8BBC1 88%, 
+    #A2A6AD 92%, 
+    #9499A1 96%, 
+    #90959E 100%
+  );
+}
+
+.plaque.gold {
+  background: linear-gradient(-68deg, 
+    #CE9728 5%, 
+    #865B11 21%, 
+    #E8B846 32%, 
+    #FFEC7A 47%, 
+    #E7B846 59%, 
+    #CE9728 74%, 
+    #FFE196 85%, 
+    #F29B3A 100%
+  );
+}
+
+.plaque.diamond {
+  background: linear-gradient(-68deg, 
+    #CDFEF3 0%, 
+    #00F0FF 11%, 
+    #DAFEF6 16%, 
+    #C2E5F1 29%, 
+    #AACCEC 35%, 
+    #BEDDF0 36%, 
+    #CFECF3 38%, 
+    #DBF6F3 41%, 
+    #E2F6F7 44%, 
+    #E4FEF8 53%, 
+    #F1FEFB 71%, 
+    #EDFDFA 74%, 
+    #D3FCFB 76%, 
+    #BBFAFB 80%, 
+    #9CF9FC 82%, 
+    #77F6FD 84%, 
+    #4AF4FD 85%, 
+    #18F1FE 87%, 
+    #00F0FF 88%, 
+    #11D2F2 91%, 
+    #1EBCE9 93%, 
+    #26AFE3 97%, 
+    #29ABE2 100%
+  );
+}
+
+.plaque.platinum {
+  background: linear-gradient(-55deg, 
+    #B9B2EE 0%, 
+    #D8F0EA 25%, 
+    #B1A9EC 32%, 
+    #E6E6E6 41%, 
+    #FFFFFF 68%, 
+    #DBF5EA 85%, 
+    #B080DC 96%
+  );
+}
+
+.pbp-backdrop-background {
+  background: linear-gradient(90deg, 
+    #1C1F21 0%, 
+    rgba(77, 92, 98, 0.49) 61%, 
+    rgba(177, 215, 229, 0.10) 100%
+  );
+}
+
+.pbp-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/marble.svg'), url('/marble.svg');;
+  background-repeat: repeat;
+  background-size: 15px 27px;
+    background-position: 0 0, 7.5px 12.5px;
+  opacity: 0.10;
+}
+
+.pbp-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(163deg, #1c1f2100 15%, #4d5c6259 61%, #b1d7e547 100%);;
+}
+
+@layer components {
+  .radial-progress {
+    @apply relative w-full h-full;
+  }
+
+  .radial-progress-inner {
+    @apply absolute inset-[10%] w-4/5 h-4/5;
+  }
+}
+
+
+::-webkit-scrollbar {
+  @apply h-2;
+  @apply w-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-500;
+  border-radius: 10px;
+}
